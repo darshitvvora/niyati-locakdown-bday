@@ -172,7 +172,7 @@ window.onready  = (function(t){
       cardsCollection.init(HEIGHT);
   
       scrollVel = 0;
-      document.body.addEventListener('mousewheel', function(e) {
+      document.body.addEventListener('mouseclick', function(e) {
         e.preventDefault();
         scrollVel += e.deltaY;
       }, false); 
