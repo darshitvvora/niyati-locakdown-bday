@@ -6,8 +6,12 @@ body{
     height:100vh;
     background: #26993d;
     overflow:hidden;
+    background:url('https://i.imgur.com/UMnw0tW.jpg');
+    background-size:cover;
+    color: #121212;
   }
-  
+
+
   ul#menu {
     padding: 0;
     margin: 0;
