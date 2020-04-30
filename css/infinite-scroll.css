@@ -1,0 +1,138 @@
+* {margin: 0; padding: 0;}
+
+body { font-family: 'Helvetica', Arial, sans-serif; overflow: hidden; }
+
+canvas {display: block;}
+
+#loading {     
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 200px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+#timeline { 
+  position: fixed;
+  width: 100%; 
+  padding-top: 20%;
+
+  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 800;
+
+  -moz-transform-style: preserve-3d;
+  -moz-perspective: 800;
+
+  transform-style: preserve-3d;
+  perspective: 800;   
+}
+
+#timeline article {
+  width: 400px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  position: absolute;
+
+  -webkit-box-shadow: 0px 10px 32px -4px rgba(0,0,0,0.14);
+  -moz-box-shadow: 0px 10px 32px -4px rgba(0,0,0,0.14);
+  box-shadow: 0px 10px 32px -4px rgba(0,0,0,0.14);
+
+  -webkit-transform: rotateZ(20deg);
+  -moz-transform: rotateZ(20deg);
+  transform: rotateZ(20deg);
+}
+
+#timeline article .imgContainer {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+#timeline article .imgContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#timeline article .cardInfo {
+  padding: 18px 12px;
+}
+
+#timeline article .cardInfo p {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.62);
+}
+
+#timeline article h3 {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  padding: 12px 0 12px 12px;
+  bottom: 0;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  background: rgba(66,66,66,0);
+  background: -moz-linear-gradient(top, rgba(66,66,66,0) 0%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(66,66,66,0)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(66,66,66,0) 0%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(66,66,66,0) 0%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(66,66,66,0) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(66,66,66,0) 0%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#424242', endColorstr='#000000', GradientType=0 );
+}
+
+p#info {
+  position: fixed;
+  top: 26px;
+  left: 26px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+}
