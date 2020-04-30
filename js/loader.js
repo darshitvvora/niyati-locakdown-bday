@@ -123,10 +123,11 @@ this.start = function(){
     }
     
 this.done = function(){
-
+  
+ 
     }
 
 setInterval(movementTick,16);
     tick();
-
+    $("#enterbutton").show();
 })("loader");
